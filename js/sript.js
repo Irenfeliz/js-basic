@@ -65,5 +65,5 @@ console.log(result4);
 3. NaN присваеваем в переменную result
 5. c помощью console.log выводим result в консоль 
 */
-let result50 = 10 / +"2,5";
+let result5 = 10 / +"2,5";
 console.log(result5);
