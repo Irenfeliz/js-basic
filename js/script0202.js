@@ -13,13 +13,13 @@ let result;
 
 if (a >= 0 && b >= 0) {
     result = a - b;
-    alert("разность этих чисел:" + result);
+    console.log("разность этих чисел:" + result);
 } else if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
     result = a + b;
-    alert("сумма этих чисел: " + result);
+    console.log("сумма этих чисел: " + result);
 } else {
     result = a * b;
-    alert("произведение этих чисел: " + result);
+    console.log("произведение этих чисел: " + result);
 }
 
 //задание 4
@@ -27,11 +27,17 @@ if (a >= 0 && b >= 0) {
 функция для сложения должна принимать два числа, складывать их и возвращать результат.
 Обязательно использовать оператор return.*/
 
+/**
+ *
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
+
 //сумма чисел (значения задаются из предыдущего задания)
 function sum(a, b) {
     return a + b;
 }
-
 let x = sum(a, b);
 console.log("Сумма чисел a и b равна " + x);
 
@@ -55,12 +61,32 @@ function div(a, b) {
     return a / b;
 }
 let o = div(a, b);
-console.log("Частное чисел a и b равно " + Math.round(o*100)/100);
+console.log("Частное чисел a и b равно " + Math.round(o * 100) / 100);
 
-
-//Задание5 
+//Задание5
 /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
 где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
 переданного значения операции (использовать switch) выполнить одну из арифметических операций
 (использовать функции из задания 4) и вернуть полученное значение.*/
 
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case "+":
+            return sum(arg1, arg2);
+        case "-":
+            return diff(arg1, arg2);
+        case "*":
+            return prod(arg1, arg2);
+        case "/":
+            return div(arg1, arg2);
+        default:
+            console.log("некорректная операция");
+    }
+}
+
+let arg1 = +prompt("введите первое число");
+let arg2 = +prompt("введите второе число");
+console.log(`сумма чисел ${arg1} и ${arg2} равна ` + mathOperation(arg1,arg2,"+"));
+console.log(`разность чисел ${arg1} и ${arg2} равна ` + mathOperation(arg1,arg2,"-"));
+console.log(`произведение чисел ${arg1} и ${arg2} равно ` + mathOperation(arg1,arg2,"*"));
+console.log(`частное чисел ${arg1} и ${arg2} равно ` + mathOperation(arg1,arg2,"/"));
