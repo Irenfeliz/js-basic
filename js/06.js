@@ -9,6 +9,8 @@ xxxx
 xxxxx
 */
 
+'use strict';
+
 for (let x = 1; x <= 20; x++) {
     console.log("x".repeat(x));
 }

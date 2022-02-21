@@ -8,6 +8,8 @@ https://mzl.la/2qROQkT
 Во втором пункте массив должен стать таким https://yadi.sk/i/-xKIq_prDx3Txg
 */
 
+'use strict';
+
 const products = [
     {
         id: 3,
