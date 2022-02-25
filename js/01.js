@@ -11,10 +11,8 @@ units: 5, //это единицы tens: 4, //это десятки hundreds: 0, 
 }
 Если число было передано вне [0, 999] диапазона, не целое число или вообще не число, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.*/
 
-/**
- * функцию не написала, решила задачу, как додумалась )
- */
 
+function numberObjectFn() {
 let num = +prompt('введите число от 0 до 999', '');
 let numberObject = null;
 
@@ -24,11 +22,11 @@ if(Number.isInteger(num) && num > 0 && num < 1000){
         tens: (num % 100 - num % 10) / 10,
         hundreds: (num % 1000 - num % 100) / 100
     };
+    console.log(numberObject);
 } else {
     console.log("Вы ввели неправильное значение");
+    return numberObject = {};
+}
 }
 
-console.log(num);
-console.log(numberObject);
-
-
+numberObjectFn();
