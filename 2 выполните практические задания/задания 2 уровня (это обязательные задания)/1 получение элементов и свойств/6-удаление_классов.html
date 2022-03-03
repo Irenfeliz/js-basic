@@ -23,5 +23,14 @@
     1. Найдите все "карточки" с классом .card.
     2. Проверьте есть ли у карточки класс hidden с помощью метода contains(),
     и если есть, то удалите с помощью метода remove(). -->
+    <script>
+        'use strict';
+        const cards = document.querySelector('.card');
+        console.log(cards.classList); //для проверки: DOMTokenList(2) ['card', 'hidden', value: 'card hidden']
+        if(cards.classList.contains('hidden')) {
+            cards.classList.remove('hidden');
+        }
+        console.log(cards.classList); //для проверки: DOMTokenList ['card', value: 'card']
+    </script>
 </body>
 </html>
