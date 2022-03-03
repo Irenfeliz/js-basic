@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <button type="button" class="btn btn-outline-primary">Primary</button>
     <button type="button" class="btn btn-outline-secondary">Secondary</button>
     <button type="button" class="btn btn-outline-success">Success</button>
@@ -22,8 +21,12 @@
     2. Аналогичным образом удалите элемент с классом .btn-outline-dark -->
 
     <script>
+      "use strict";
+      let removeWarning = document.querySelector('.btn-outline-warning');
+      removeWarning.remove();
 
+      let removeDark = document.querySelector('.btn-outline-dark');
+      removeDark.remove();
     </script>
-</body>
-
+  </body>
 </html>
