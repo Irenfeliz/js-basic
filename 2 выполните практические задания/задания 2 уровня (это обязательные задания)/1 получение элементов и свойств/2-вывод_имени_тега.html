@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h3 class="one">Заголовок</h3>
     <a class="one" href="#">ссылка</a>
     <p class="one">параграф</p>
@@ -17,7 +17,11 @@
     -->
 
     <script>
-
+      "use strict";
+      let onePost = document.getElementsByClassName("one");
+      for (let i = 0; i < onePost.length; i++) {
+        console.log(onePost[i].tagName);
+      }
     </script>
-</body>
+  </body>
 </html>
