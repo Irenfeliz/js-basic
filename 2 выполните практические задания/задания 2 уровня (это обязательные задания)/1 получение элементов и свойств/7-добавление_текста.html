@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="#">ссылка</a>
     <a href="#"></a>
     <a href="#">ссылка</a>
@@ -16,7 +16,14 @@
     2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
     <script>
-        
+      "use strict";
+      let links = document.querySelectorAll("a");
+      links.forEach((link) => {
+        if (link.innerText !== "ссылка") {
+          link.innerText = "ссылка";
+        }
+        console.log(link);
+      });
     </script>
-</body>
+  </body>
 </html>
